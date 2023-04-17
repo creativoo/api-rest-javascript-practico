@@ -1,0 +1,387 @@
+:root {
+  --color1: #0077e7e7;
+  --color2: #686868;
+  --background: #eeeaea;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+  background: var(--background);
+  font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+}
+
+header {
+  padding: 30px 0;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo {
+  font-family: 'Bebas Neue', cursive;
+  font-weight: normal;
+  color: #3b3b3b;
+  font-size: 40px;
+}
+
+header nav a {
+  color: var(--color2);
+  text-decoration: none;
+  margin-right: 20px;
+}
+
+header nav a:hover,
+header nav a.active{
+  color: rgb(63, 63, 63);
+}
+
+
+/* ----------- Película Principal -----------*/
+.principal-movie {
+  font-size: 16px;
+  min-height: 40.62em;
+  color: #eeeaea;
+  background: linear-gradient(rgba(37, 37, 37, 0.50) 0%, rgba(37, 37, 37, 0.50) 100%), url(../img/backdrop.jpg); /* imagen principal */
+  background-position:top center;
+  background-size: cover;
+  margin-bottom: 3.12em;
+  display: flex;
+  align-items: end;
+}
+
+.principal-movie .container {
+  margin: 0 auto;
+  margin-bottom: 6.25em;
+}
+
+.principal-movie .title {
+  font-weight: 600;
+  font-size: 3.12em;
+  margin-bottom: 0.4em;
+}
+
+.principal-movie .description {
+  font-weight: normal;
+  font-size: 1em;
+  line-height: 1.75em;
+  max-width: 50%;
+  margin-bottom: 1.25em;
+}
+
+.principal-movie .button {
+  background: rgba(255, 254, 254, 0.26);
+  border: none;
+  border-radius: 0.31em;
+  padding: 0.93em 1.87em;
+  color: #e9e9e9;
+  margin-right: 1.25em;
+  cursor: pointer;
+  transition: .3s ease all;
+  font-size: 1.12em;
+}
+
+.principal-movie .button:hover {
+  background:#eeeaea;
+  color: rgb(54, 54, 54);
+}
+.principal-movie .button i {
+  margin-right: 0.50em;
+}
+
+/* ----------- Media Queries -----------*/
+@media screen and (max-width: 800px) {
+  header .logo {
+    margin-bottom: 10px;
+    font-size: 30px;
+  }
+  header .container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .principal-movie {
+    font-size: 14px;
+  }
+  .principal-movie .description {
+    max-width: 100%;
+  }
+}
+
+/*---------- Agregados ------------*/
+.header-container, .trendingPreview-header, .categoriesPreview-container {
+  padding: 0 54px;
+}
+
+.trendingPreview-container, .categoriesPreview-container, footer {
+  margin-top: 48px;
+}
+
+.trendingPreview-header, .categoriesPreview-title {
+  color: var(--color2);
+  margin-bottom: 24px;
+  font-family: 'Bebas Neue', cursive;
+}
+
+.movie-container {
+  cursor: pointer;
+}
+
+.movie-img {
+  border-radius: 8px;
+}
+
+.categoriesPreview-list, .categories-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  flex-wrap: wrap;
+}
+
+
+/* Header */
+.header-container {
+  padding-top: 40px;
+}
+
+.header-container--long {
+  background-image: url('https://pics.filmaffinity.com/Deadpool-777527803-large.jpg');
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.35) 19.27%, rgba(0, 0, 0, 0) 29.17%), url(https://pics.filmaffinity.com/Deadpool-777527803-large.jpg);
+  background-size: cover !important;
+  height: 480px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.header-container--categoryView {
+  background: linear-gradient(180deg, rgba(238, 204, 117, 0.5) 0%, rgba(238, 204, 117, 0) 72.92%);
+} 
+
+.header-title {
+  margin-bottom: 16px;
+}
+
+.header-arrow {
+  font-weight: var(--font-weight-text2);
+  font-size: 36px;
+  margin-bottom: 16px;
+  cursor: pointer;
+  display: inline-block;
+}
+.header-arrow--white {
+  color: var(--purple-light-1);
+}
+
+.header-searchForm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex-wrap: nowrap;
+}
+
+.header-searchForm input {
+  height: 48px;
+  width: 100%;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+.header-searchForm button {
+  width: 56px;
+  height: 48px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+
+/* Trending */
+.trendingPreview-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.trendingPreview-title {
+  font-family: 'Bebas Neue', cursive;
+  color: var(--color2);
+  font-size: 26px;
+}
+
+
+.trendingPreview-btn {
+  background: rgba(109, 109, 109, 0.26);
+  border: none;
+  border-radius: 0.31em;
+  padding: 0.93em 1.87em;
+  color: #4d4c4c;
+  margin-right: 1.25em;
+  cursor: pointer;
+  transition: .3s ease all;
+  font-size: 1.12em;
+}
+
+.trendingPreview-movieList {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  height: 241px;
+  padding-left: 50px;
+  padding-bottom: 16px;
+}
+
+.trendingPreview-movieList .movie-container {
+  display: inline-block;
+  margin-right: 8px;
+}
+
+.trendingPreview-movieList .movie-container .movie-img {
+  height: 225px;
+  min-height: 225px;
+  max-height: 225px;
+  width: 150px;
+  min-width: 150px;
+  max-width: 150px;
+}
+
+
+/* Categories */
+.category-container {
+  width: 45%;
+}
+
+.category-title {
+  margin-bottom: 8px;
+  cursor: pointer;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: var(--color2);
+
+}
+
+.category-title::before {
+  content: '••••';
+  color: transparent;
+  /* TODO: cambiar color por ID de la categoría */
+  background-color: var(--idColor);
+  border-radius: 8px;
+  margin-right: 8px;
+  width: 8px;
+  height: 8px;
+}
+
+/* Generic List (search, trending & category) */
+.genericList-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 32px 24px;
+}
+
+.genericList-container .movie-container {
+  display: inline-block;
+  width: 47.5%;
+}
+
+.genericList-container .movie-img {
+  width: 100%;
+}
+
+
+/* Movie Detail */
+.movieDetail-container {
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  padding: 32px 24px;
+  margin-top: 403px;
+  z-index: 1;
+  position: absolute;
+  background-color: var(--purple-light-1);
+}
+
+.movieDetail-title {
+  display: inline-block;
+  width: 80%;
+  margin: 0 0 16px 0;
+  padding: 0;
+}
+
+.movieDetail-score {
+  display: inline-block;
+  text-align: right;
+  width: 18%;
+  font-weight: var(--font-weight-title2);
+}
+.movieDetail-score::before {
+  content: '★';
+  color: var(--yellow);
+  padding-right: 4px;
+}
+
+.movieDetail-description {
+  margin: 0 0 24px 0;
+}
+
+.relatedMovies-container {
+  margin-top: 24px;
+  height: 216px;
+}
+
+.relatedMovies-title {
+  margin-bottom: 16px;
+}
+
+.relatedMovies-scrollContainer {
+  position: absolute;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  width: calc(100vw - 24px);
+  padding-bottom: 16px;
+}
+
+.relatedMovies-scrollContainer .movie-container {
+  display: inline-block;
+  margin-right: 8px;
+}
+
+.relatedMovies-scrollContainer .movie-img {
+  width: 125px;
+  min-width: 125px;
+  max-width: 125px;
+  height: 187.5px;
+  min-height: 187.5px;
+  max-height: 187.5px;
+}
+  
+
+/* Footer */
+footer {
+  background-color: var(--color2);
+  color: var(--background);
+  text-align: center;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* Navigation */
+.inactive {
+  display: none;
+}
