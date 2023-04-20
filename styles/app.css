@@ -1,7 +1,7 @@
 :root {
-  --color1: #0077e7e7;
-  --color2: #686868;
-  --background: #eeeaea;
+  --color1: #aaa9a9;
+  --color2: #e4e1e1;
+  --background: #202022;
 }
 
 * {
@@ -33,19 +33,19 @@ header .container {
 header .logo {
   font-family: 'Bebas Neue', cursive;
   font-weight: normal;
-  color: #3b3b3b;
+  color: #e4e1e1;
   font-size: 40px;
 }
 
 header nav a {
-  color: var(--color2);
+  color: var(--color1);
   text-decoration: none;
   margin-right: 20px;
 }
 
 header nav a:hover,
 header nav a.active{
-  color: rgb(63, 63, 63);
+  color: rgb(255, 255, 255);
 }
 
 
@@ -121,7 +121,7 @@ header nav a.active{
 
 /*---------- Agregados ------------*/
 .header-container, .trendingPreview-header, .categoriesPreview-container {
-  padding: 0 54px;
+  padding: 0 85px;
 }
 
 .trendingPreview-container, .categoriesPreview-container, footer {
@@ -138,7 +138,7 @@ header nav a.active{
   cursor: pointer;
 }
 
-.movie-img {
+.movie-img, .tv-show-img {
   border-radius: 8px;
 }
 
@@ -207,7 +207,13 @@ header nav a.active{
 }
 
 
-/* Trending */
+/* Peliculas */
+article {
+  display: flex;
+    flex-wrap: wrap;
+    align-content: start;
+    justify-content: start;
+}
 .trendingPreview-header {
   display: flex;
   align-items: center;
@@ -221,39 +227,47 @@ header nav a.active{
 }
 
 
-.trendingPreview-btn {
+.trendingPreview-btn,
+.tvShowPreview-btn {
   background: rgba(109, 109, 109, 0.26);
   border: none;
   border-radius: 0.31em;
   padding: 0.93em 1.87em;
-  color: #4d4c4c;
-  margin-right: 1.25em;
+  color: #e0e0e0;
   cursor: pointer;
   transition: .3s ease all;
-  font-size: 1.12em;
 }
 
-.trendingPreview-movieList {
-  overflow-x: scroll;
+.trendingPreview-btn:hover {
+  background:#eeeaea;
+  color: rgb(54, 54, 54);
+}
+
+.trendingPreview-movieList,
+.tvShowPreview-List {
   overflow-y: hidden;
   white-space: nowrap;
-  height: 241px;
-  padding-left: 50px;
-  padding-bottom: 16px;
+  height: 460px;
+  padding-left: 85px;
+  padding-right: 70px;
 }
 
-.trendingPreview-movieList .movie-container {
+.trendingPreview-movieList .movie-container,
+.tvShowPreview-List .tvShow-container {
+  display: flex;
   display: inline-block;
   margin-right: 8px;
 }
 
-.trendingPreview-movieList .movie-container .movie-img {
+.trendingPreview-movieList .movie-container .movie-img,
+.tvShowPreview-List .tvShow-container .tv-show-img {
   height: 225px;
   min-height: 225px;
   max-height: 225px;
   width: 150px;
   min-width: 150px;
   max-width: 150px;
+  
 }
 
 
@@ -297,7 +311,7 @@ header nav a.active{
   width: 47.5%;
 }
 
-.genericList-container .movie-img {
+.genericList-container .movie-img .tv-show-img {
   width: 100%;
 }
 

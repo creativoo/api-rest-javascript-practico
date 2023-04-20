@@ -1,6 +1,15 @@
-async function getTrendingMoviesPreview () {
-    const res = await fetch ('https://api.themoviedb.org/3/trending/movie/day?api_key=' + API_KEY);
-    const data = await res.json();
+const api = axios.create({
+    baseURL:'https://api.themoviedb.org/3/',
+    headers: {
+        'Content-Type': 'application/json;charset=utf-8'
+    },
+    params: {
+        'api_key' : API_KEY,
+    },
+});
+
+async function getTrendingMoviesPreview () {  //Peliculas
+    const {data} = await api ('trending/movie/day');
 
     const movies = data.results;
     movies.forEach(movie => {
@@ -13,7 +22,7 @@ async function getTrendingMoviesPreview () {
         movieImg.classList.add('movie-img');
         movieImg.setAttribute('alt', movie.title);
         movieImg.setAttribute(
-            'src', 'https://image.tmdb.org/t/p/w300' + movie.poster_path, 
+            'src', 'https://image.tmdb.org/t/p/w300' + movie.poster_path,
             );
 
         movieContainer.appendChild(movieImg);
@@ -21,9 +30,8 @@ async function getTrendingMoviesPreview () {
     });
 }
 
-async function getCategoriesPreview() {
-    const res = await fetch ('https://api.themoviedb.org/3/genre/movie/list?api_key=' + API_KEY + '&language=es');
-    const data = await res.json();
+async function getCategoriesPreview() {  // Categorias
+    const {data} = await api ('genre/movie/list');
 
     const categories = data.genres;
     categories.forEach(category => {
@@ -43,5 +51,28 @@ async function getCategoriesPreview() {
     });
 }
 
+async function getTVShowPreview () {  //TV SHOWS
+    const {data} = await api ('trending/tv/day');
+
+    const tvShows = data.results;
+    tvShows.forEach(latest => {
+        const tvShowPreviewContainer = document.querySelector ('#tvShow-Preview .tvShowPreview-List');
+
+        const tvShowContainer = document.createElement('div');
+        tvShowContainer.classList.add('tvShow-container');
+
+        const tvShowImg =  document.createElement ('img');
+        tvShowImg.classList.add('tv-show-img');
+        tvShowImg.setAttribute('alt', latest.title);
+        tvShowImg.setAttribute(
+            'src', 'https://image.tmdb.org/t/p/w300' + latest.poster_path,
+            );
+
+        tvShowContainer.appendChild(tvShowImg);
+        tvShowPreviewContainer.appendChild(tvShowContainer);
+    });
+}
+
 getTrendingMoviesPreview();
 getCategoriesPreview();
+getTVShowPreview ();

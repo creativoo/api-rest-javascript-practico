@@ -18,9 +18,9 @@
       <h2 class="logo">MOVIEFLOW</h2>
       <nav>
         <a href="#" class="active">Home</a>
-        <a href="#">TV Shows</a>
         <a href="#">Películas</a>
-        <a href="#">Series</a>
+        <a href="#">TV Shows</a>
+        <a href="#">Popular</a>
         <a href="#">Favoritos</a>
       </nav>
     </div>
@@ -39,19 +39,20 @@
     
     <section id="trendingPreview" class="trendingPreview-container">
       <div class="trendingPreview-header">
-      <h2 class="trendingPreview-title">En tendencia</h2>
+      <h2 class="trendingPreview-title">Peliculas</h2>
       <button class="trendingPreview-btn">Ver más</button>
       </div>
       <article class="trendingPreview-movieList">
-      <div class="movie-container">
-      <!-- <img
-                src="https://www.themoviedb.org/t/p/original/3BcrJT9AHR9SKerlY3WQAXgisfu.jpg"
-                class="movie-img"
-                alt="Nombre de la película"
-              /> -->
-      </div>
       </article>
       </section>
+      <section id="tvShow-Preview" class="trendingPreview-container">
+        <div class="trendingPreview-header">
+        <h2 class="trendingPreview-title">Tv Shows</h2>
+        <button class="trendingPreview-btn">Ver más</button>
+        </div>
+        <article class="tvShowPreview-List">
+        </article>
+        </section>
       <section id="categoriesPreview" class="categoriesPreview-container">
         <h2 class="categoriesPreview-title">Generos</h2>
         <article class="categoriesPreview-list">
@@ -128,7 +129,7 @@
       </section>
       <footer>| MovieFlow 2023 | Todos los Derechos Resevados.</footer>
   </main>
-
+  <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
   <script src="https://kit.fontawesome.com/434552135b.js" crossorigin="anonymous"></script>
   <script src="src/secrets.js"></script>
   <script src="src/main.js"></script>
