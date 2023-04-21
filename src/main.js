@@ -13,7 +13,7 @@ async function getTrendingMoviesPreview () {  //Peliculas
 
     const movies = data.results;
     movies.forEach(movie => {
-        const trendingPreviewMoviesContainer = document.querySelector ('#trendingPreview .trendingPreview-movieList')
+        const trendingMoviesPreviewList = document.querySelector ('#trendingPreview .trendingPreview-movieList')
 
         const movieContainer = document.createElement ('div');
         movieContainer.classList.add('movie-container');
@@ -26,7 +26,7 @@ async function getTrendingMoviesPreview () {  //Peliculas
             );
 
         movieContainer.appendChild(movieImg);
-        trendingPreviewMoviesContainer.appendChild(movieContainer);
+        trendingMoviesPreviewList.appendChild(movieContainer);
     });
 }
 
@@ -35,7 +35,7 @@ async function getCategoriesPreview() {  // Categorias
 
     const categories = data.genres;
     categories.forEach(category => {
-        const PreviewCategoriesContainer = document.querySelector ('#categoriesPreview .categoriesPreview-list');
+        const categoriesPreviewList = document.querySelector ('#categoriesPreview .categoriesPreview-list');
         
         const categoryContainer = document.createElement ('div');
         categoryContainer.classList.add('category-container');
@@ -47,7 +47,7 @@ async function getCategoriesPreview() {  // Categorias
         const categoryTitleText = document.createTextNode(category.name);
         categoryTitle.appendChild(categoryTitleText);
         categoryContainer.appendChild(categoryTitle);
-        PreviewCategoriesContainer.appendChild(categoryContainer);
+        categoriesPreviewList.appendChild(categoryContainer);
     });
 }
 
@@ -56,7 +56,7 @@ async function getTVShowPreview () {  //TV SHOWS
 
     const tvShows = data.results;
     tvShows.forEach(latest => {
-        const tvShowPreviewContainer = document.querySelector ('#tvShow-Preview .tvShowPreview-List');
+        const tvShowPreviewSection = document.querySelector ('#tvShow-Preview .tvShowPreview-List');
 
         const tvShowContainer = document.createElement('div');
         tvShowContainer.classList.add('tvShow-container');
@@ -69,10 +69,7 @@ async function getTVShowPreview () {  //TV SHOWS
             );
 
         tvShowContainer.appendChild(tvShowImg);
-        tvShowPreviewContainer.appendChild(tvShowContainer);
+        tvShowPreviewSection.appendChild(tvShowContainer);
     });
 }
 
-getTrendingMoviesPreview();
-getCategoriesPreview();
-getTVShowPreview ();
