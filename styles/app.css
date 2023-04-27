@@ -1,7 +1,7 @@
 :root {
-  --color1: #aaa9a9;
-  --color2: #e4e1e1;
-  --background: #202022;
+  --color1: #3a3939;
+  --color2: #383838;
+  --background: #dbdbdb;
 }
 
 * {
@@ -33,7 +33,7 @@ header .container {
 header .logo {
   font-family: 'Bebas Neue', cursive;
   font-weight: normal;
-  color: #e4e1e1;
+  color: #383838;
   font-size: 40px;
 }
 
@@ -45,7 +45,7 @@ header nav a {
 
 header nav a:hover,
 header nav a.active{
-  color: rgb(255, 255, 255);
+  color: rgb(66, 66, 66);
 }
 
 
@@ -129,7 +129,7 @@ header nav a.active{
 }
 
 .trendingPreview-header, .categoriesPreview-title {
-  color: var(--color2);
+  color: #383838;
   margin-bottom: 24px;
   font-family: 'Bebas Neue', cursive;
 }
@@ -168,7 +168,7 @@ header nav a.active{
 
 .header-container--categoryView {
   background: linear-gradient(180deg, rgba(238, 204, 117, 0.5) 0%, rgba(238, 204, 117, 0) 72.92%);
-} 
+}
 
 .header-title {
   margin-bottom: 16px;
@@ -229,7 +229,7 @@ article {
 
 .trendingPreview-btn,
 .tvShowPreview-btn {
-  background: rgba(109, 109, 109, 0.26);
+  background: #383838;
   border: none;
   border-radius: 0.31em;
   padding: 0.93em 1.87em;
@@ -239,8 +239,8 @@ article {
 }
 
 .trendingPreview-btn:hover {
-  background:#eeeaea;
-  color: rgb(54, 54, 54);
+  background:rgba(61, 61, 61, 0.637);
+  color: rgb(235, 232, 232);
 }
 
 .trendingPreview-movieList,
@@ -381,7 +381,6 @@ article {
   min-height: 187.5px;
   max-height: 187.5px;
 }
-  
 
 /* Footer */
 footer {
