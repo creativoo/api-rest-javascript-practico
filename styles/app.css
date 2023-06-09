@@ -267,7 +267,7 @@ article {
   width: 150px;
   min-width: 150px;
   max-width: 150px;
-  
+  margin: 0.9px
 }
 
 
@@ -281,8 +281,9 @@ article {
   cursor: pointer;
   white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis;
   color: var(--color2);
+  background-color: #dbdbdb;
+  border-radius: 5px;
 
 }
 
